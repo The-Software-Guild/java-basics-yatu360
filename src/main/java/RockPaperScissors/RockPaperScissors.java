@@ -7,8 +7,10 @@ public class RockPaperScissors {
     public static String play(int user_input){
         Random rand = new Random();
         int bot_input = rand.nextInt(3) + 1;
-
-        if (user_input==1 && bot_input ==3) {
+        if (user_input>3 || user_input<1){
+            return "Error: Invalid input";
+        }
+        else if (user_input==1 && bot_input ==3) {
             return "Player won";
         }
         else if (user_input == 2 && bot_input==1) {
@@ -50,7 +52,6 @@ public class RockPaperScissors {
                     count++;
                     break;
                 default:
-                    System.out.println("Invalid input");
                     break;
             }
             if (count == rounds) done = true;
@@ -75,7 +76,7 @@ public class RockPaperScissors {
         Scanner round_input  = new Scanner(System.in);
         System.out.println("How many rounds would you like to play?");
         int rounds = round_input.nextInt();
-        if (rounds>1 || rounds <11){
+        if (rounds>1 && rounds <11){
             game(rounds);
         }else{
             System.out.println("Error: incorrect rounds input");

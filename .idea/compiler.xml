@@ -9,8 +9,8 @@
         <module name="java-basics-yatu360" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="java-basics-yatu360" target="1.5" />
+    <bytecodeTargetLevel target="11">
+      <module name="java-basics-yatu360" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>

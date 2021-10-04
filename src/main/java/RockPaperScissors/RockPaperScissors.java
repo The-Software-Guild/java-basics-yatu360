@@ -70,7 +70,8 @@ public class RockPaperScissors {
 
         if (user_win>bot_win){
             winner = "Player Wins!";
-        } else winner = "Computer Wins!";
+        }else if(user_win==bot_win) winner = "tie";
+        else winner = "Computer Wins!";
 
         String printout = String.format("User wins: %d, Computer wins: %d, Draws: %d", user_win, bot_win, draw);
         System.out.println(printout);

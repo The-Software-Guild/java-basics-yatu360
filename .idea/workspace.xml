@@ -134,20 +134,4 @@
     <MESSAGE value="001: Rock, Paper, Scissors complete" />
     <option name="LAST_COMMIT_MESSAGE" value="001: Rock, Paper, Scissors complete" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/RockPaperScissors/RockPaperScissors.java</url>
-          <line>36</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/RockPaperScissors/RockPaperScissors.java</url>
-          <line>37</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
 </project>

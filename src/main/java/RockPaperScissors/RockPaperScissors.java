@@ -4,6 +4,11 @@ import java.util.*;
 
 public class RockPaperScissors {
 
+
+    /**
+     * @param user_input is the user's choice of move. This method generate the computers random move and checks
+     * who won. Also checks if the input is valid.
+     */
     public static String play(int user_input){
         Random rand = new Random();
         int bot_input = rand.nextInt(3) + 1;
@@ -25,6 +30,12 @@ public class RockPaperScissors {
         return "Player lost";
     }
 
+    /**
+     * Parameter is an integer containing the number of rounds.
+     * Main game method which loops until number of valid rounds is complete. Valid rounds are rounds where either the
+     * player wins, computer wins or draw. Invalid rounds are when the user inputs a non valid input. The win/loss count
+     * is stored in this method. If user wants to continue play, rounds method is called again.
+     */
     public static void game (int rounds){
         boolean done = false;
         Scanner input = new Scanner(System.in);
@@ -34,7 +45,7 @@ public class RockPaperScissors {
         String winner;
 
         while (!done) {
-            System.out.println("Please enter your choice of weapon, 1 = Rock, 2 = Paper, 3 = Scissors? : ");
+            System.out.println("Please enter your weapon of choice, 1 = Rock, 2 = Paper, 3 = Scissors? : ");
             user_input = input.nextInt();
             result = play(user_input);
             System.out.println(result);
@@ -62,16 +73,21 @@ public class RockPaperScissors {
         } else winner = "Computer Wins!";
 
         String printout = String.format("User wins: %d, Computer wins: %d, Draws: %d", user_win, bot_win, draw);
+        System.out.println(printout);
         System.out.println(winner);
-        System.out.println("Would you like to player again, please enter yes or not: ");
+        System.out.println("Would you like to player again, please enter yes or no: ");
         input.nextLine(); //Bug workaround to force program to wait and ask for command
         String game_restart = input.nextLine();
-        if (game_restart.equals("Yes")||game_restart.equals("yes")) {
+        if (game_restart.equals("Yes")||game_restart.equals("yes")) { //Checks if user wants to play again
             rounds();
         }
         input.close();
     }
 
+    /**
+     *Asks user for input via console for number of rounds, if number of rounds is greater than 10, prints error and
+     * exits program issuing -1.
+     */
     public static void rounds (){
         Scanner round_input  = new Scanner(System.in);
         System.out.println("How many rounds would you like to play?");
@@ -83,7 +99,6 @@ public class RockPaperScissors {
             System.exit(-1);
         }
         round_input.close();
-
     }
 
 

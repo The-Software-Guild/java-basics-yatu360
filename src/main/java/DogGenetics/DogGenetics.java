@@ -26,11 +26,25 @@ public class DogGenetics {
             }
         }
         percentage[percentage.length-1] = c;
-
+        shuffleArray(percentage);
         System.out.println(dogName + " "+ "is:");
         for (int j = 0; j<breeds.length; j++){
             System.out.printf("%d%% %s %n", percentage[j], breeds[j]);
         }
 
     }
+
+    // Implementing Fisher–Yates shuffle
+    static void shuffleArray(int[] ar) {
+
+        Random rnd = new Random();
+        for (int i = ar.length - 1; i > 0; i--) {
+            int index = rnd.nextInt(i + 1);
+            // Simple swap
+            int a = ar[index];
+            ar[index] = ar[i];
+            ar[i] = a;
+        }
+    }
+
 }

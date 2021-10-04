@@ -1,5 +1,4 @@
 package RockPaperScissors;
-
 import java.util.*;
 
 public class RockPaperScissors {
@@ -14,19 +13,19 @@ public class RockPaperScissors {
         if (user_input>3 || user_input<1){
             return "Error: Invalid input";
         }
-        else if (user_input==1 && bot_input ==3) {
-            return "Player won";
-        }
-        else if (user_input == 2 && bot_input==1) {
-            return "Player won";
-        }
-        else if (user_input ==3 && bot_input == 2) {
+        else if (isPlayerWon(user_input, bot_input)) {
             return "Player won";
         }
         else if (user_input == bot_input) {
             return "Draw";
         }
         return "Player lost";
+    }
+
+    private static boolean isPlayerWon(int user_input, int bot_input) {
+        return (user_input == 1 && bot_input == 3)
+                || (user_input == 2 && bot_input == 1)
+                || (user_input == 3 && bot_input == 2);
     }
 
     /**
@@ -92,7 +91,7 @@ public class RockPaperScissors {
         Scanner round_input  = new Scanner(System.in);
         System.out.println("How many rounds would you like to play?");
         int rounds = round_input.nextInt();
-        if (rounds>1 && rounds <11){
+        if (rounds>0 && rounds <11){
             game(rounds);
         }else{
             System.out.println("Error: incorrect rounds input");
@@ -105,5 +104,4 @@ public class RockPaperScissors {
         rounds();
         System.out.println("Thanks for playing!");
     }
-
 }

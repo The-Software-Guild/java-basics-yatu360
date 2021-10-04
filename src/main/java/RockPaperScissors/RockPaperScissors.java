@@ -4,7 +4,6 @@ import java.util.*;
 
 public class RockPaperScissors {
 
-
     /**
      * @param user_input is the user's choice of move. This method generate the computers random move and checks
      * who won. Also checks if the input is valid.
@@ -101,7 +100,6 @@ public class RockPaperScissors {
         }
         round_input.close();
     }
-
 
     public static void main(String[] args) {
         rounds();

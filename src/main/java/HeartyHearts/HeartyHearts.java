@@ -16,7 +16,5 @@ public class HeartyHearts {
         Scanner input = new Scanner(System.in);
         int age = input.nextInt();
         healthCheck(age);
-
-
     }
 }

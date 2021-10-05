@@ -1,4 +1,4 @@
-package HeartyHearts;
+package JavaBasicsAssessment.HeartyHearts;
 
 import java.util.*;
 

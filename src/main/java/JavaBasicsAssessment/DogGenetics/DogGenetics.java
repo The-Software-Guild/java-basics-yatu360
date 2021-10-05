@@ -1,4 +1,4 @@
-package DogGenetics;
+package JavaBasicsAssessment.DogGenetics;
 
 import java.util.*;
 

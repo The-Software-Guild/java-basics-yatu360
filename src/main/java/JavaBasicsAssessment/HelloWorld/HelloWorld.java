@@ -1,4 +1,4 @@
-package HelloWorld;
+package JavaBasicsAssessment.HelloWorld;
 
 public class HelloWorld {
 

@@ -1,4 +1,4 @@
-package RockPaperScissors;
+package JavaBasicsAssessment.RockPaperScissors;
 import java.util.*;
 
 public class RockPaperScissors {

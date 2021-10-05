@@ -1,4 +1,4 @@
-package SummativeSums;
+package JavaBasicsAssessment.SummativeSums;
 
 import java.util.*;
 
